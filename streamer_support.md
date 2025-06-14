@@ -262,6 +262,43 @@ All media uploaded must be approved by Joystick staff before you can use it for 
 
 > We are moving to a tiered media system, and increasing video size for streamers. This guide will be updated once that is available.
 
+### Troubleshooting Uploads
+
+1. Make sure you are adhering to all the restrictions above.
+2. If the video fails to upload, try holding down `ctrl` then pressing `F5`, and try to upload it again.
+3. If you're still having issues with your video try using the #support channel in our discord.
+4. Additionally along side the support channel you can run ffprobe to provide more information about your video, by following the steps below.
+
+&nbsp; &nbsp;
+
+##### Using FFProbe (FFmpeg):
+* Download [FFmpeg](https://github.com/BtbN/FFmpeg-Builds/releases/tag/latest) which will come with `ffprobe` as well, it is a video transcoding, encoding tool that is the basis for almost all video applications out there.
+> Note: You will want to select the `ffmpeg-master-latest-win64-gpl` version as it will contain all the libraries you need to run on windows.
+
+* Extract the folder, and then copy your video file to the `FFmpeg/bin` folder.
+* Go into the `FFmpeg/bin` folder, and while holding down shift, right click in an empty area, and click `Open PowerShell window here`
+* Once PowerShell is opened, type `./ffprobe myvideo_example.mp4` you will enter the actual name of your video file.
+> Note: if there are spaces in your video files name you will need to wrap the name in quotes e.g. `./ffprobe "my example video.mkv"`.
+* Copy the line `Input #0` and below, and paste it to discord support channel.
+> 💡 Tip: before pasting type \`\`\` \`\`\` and paste your clipboard between the three tilde's at the start so that it is formatted neatly.
+
+An example would look like this:
+```
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'example video.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41isomavc1
+    creation_time   : 2019-09-16T11:18:48.000000Z
+  Duration: 00:00:20.02, start: 0.000000, bitrate: 4957 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080, 4950 kb/s, 60 fps, 60 tbr, 60 tbn (default)
+    Metadata:
+      creation_time   : 2019-09-16T11:18:48.000000Z
+      handler_name    : L-SMASH Video Handler
+      vendor_id       : [0][0][0][0]
+      encoder         : AVC Coding
+```
+
 ### SFW vs NSFW
 
 It may seem a bit counterintuitive that a site based around "NSFW" (not safe for work) content would even have a policy for what constitues "SFW" or not. We do this for a few reasons; one of which is reducing what adult based content is displayed while users are logged out. This also gives users the ability to capture images of our home page to post on other social media sites without the fear of being banned. We feel that we can create a healthy balance between what other non-adult-based sites do, and full on porn sites.

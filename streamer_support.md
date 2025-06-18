@@ -279,8 +279,8 @@ All media uploaded must be approved by Joystick staff before you can use it for 
 * Go into the `FFmpeg/bin` folder, and while holding down shift, right click in an empty area, and click `Open PowerShell window here`
 * Once PowerShell is opened, type `./ffprobe myvideo_example.mp4` you will enter the actual name of your video file.
 > Note: if there are spaces in your video files name you will need to wrap the name in quotes e.g. `./ffprobe "my example video.mkv"`.
-* Copy the line `Input #0` and below, and paste it to discord support channel.
-> 💡 Tip: before pasting type \`\`\` \`\`\` and paste your clipboard between the three tilde's at the start so that it is formatted neatly.
+* Copy the line `Input #0` and below, and paste it to [discord](https://discord.gg/zKvCf8hrGP) support channel.
+> 💡 Tip: before pasting type \`\`\` \`\`\` and paste your clipboard between the three backtick's at the start so that it is formatted neatly.
 
 An example would look like this:
 ```
